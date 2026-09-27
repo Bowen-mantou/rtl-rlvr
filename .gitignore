@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+
+# 第三方数据（VerilogEval V2 原始下载与清洗产物，版权在 NVlabs；按 RUNBOOK 自行下载）
+data/raw/
+data/verilogeval_cleaned.jsonl
+data/all_problems.jsonl
+
+# 中间产物（teacher 轨迹 / 标注 / 构对数据，可由脚本重新生成）
+data/e5/
+data/e7/
+data/sft/sft_alpaca_e5.jsonl
+data/sft/sft_alpaca_e6.jsonl
+data/sft/sft_alpaca_mix.jsonl
+data/sft/sft_alpaca_e5.json
+data/sft/sft_alpaca_e6.json
+data/sft/sft_alpaca_mix.json
+
+# 大日志与临时文件
+logs/*.log
+nettest*.sh
+install_lf*.sh
+results/*/completions.jsonl
+*.tmp

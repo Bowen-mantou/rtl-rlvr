@@ -1,0 +1,30 @@
+# E2: SFT（LLaMA-Factory + LoRA）| Qwen2.5-Coder-3B-Instruct
+# 设计文档第三节阶段 1：LoRA rank 32 / alpha 64；学 Verilog 语法与 module 格式习惯
+# 用法（在独立 conda 环境 llamafactory 里）：
+#   cd ~/LLaMA-Factory && llamafactory-cli train \
+#       /root/autodl-tmp/rtl-rlvr/configs/sft/llamafactory_sft.yaml
+# 完整命令清单见 configs/sft/命令清单.md
+model_name_or_path: /root/autodl-tmp/models/Qwen2.5-Coder-3B-Instruct
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 32
+lora_alpha: 64
+lora_target: all
+template: qwen
+dataset: rtl_sft_e6
+cutoff_len: 2048
+overwrite_cache: true
+preprocessing_num_workers: 4
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+lr_scheduler_type: cosine
+logging_steps: 5
+warmup_ratio: 0.1
+save_steps: 100
+learning_rate: 5.0e-5
+num_train_epochs: 3.0
+bf16: true
+output_dir: /root/autodl-tmp/rtl-rlvr/checkpoints/sft/e6-lora
+overwrite_output_dir: true
+plot_loss: true

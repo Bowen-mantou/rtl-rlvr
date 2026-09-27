@@ -1,0 +1,44 @@
+{
+  "rtl_sft": {
+    "file_name": "/root/autodl-tmp/rtl-rlvr/data/sft/sft_alpaca.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "rtl_sft_e6": {
+    "file_name": "/root/autodl-tmp/rtl-rlvr/data/sft/sft_alpaca_e6.jsonl",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "rtl_sft_e5": {
+    "file_name": "/root/autodl-tmp/rtl-rlvr/data/sft/sft_alpaca_e5.jsonl",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "rtl_sft_mix": {
+    "file_name": "/root/autodl-tmp/rtl-rlvr/data/sft/sft_alpaca_mix.jsonl",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "rtl_dpo": {
+    "file_name": "/root/autodl-tmp/rtl-rlvr/data/e7/dpo_pairs_all.jsonl",
+    "ranking": true,
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  }
+}
